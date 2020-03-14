@@ -1340,6 +1340,7 @@ static inline void toggle_dirty_led(void) {
 #define IEC_ATN_INT         INT3
 #define IEC_ATN_INT_VECT    INT3_vect
 static inline void iec_interrupts_init(void) {
+  EICRA |= _BV(ISC30);
   EIMSK |= _BV(INT3);
 }
 

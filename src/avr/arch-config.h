@@ -1237,6 +1237,7 @@ static inline uint8_t sdcard2_wp(void) {
 
 // SD card 2 CS pin
 static inline __attribute__((always_inline)) void sdcard2_set_ss(uint8_t state) {
+  (void)state; // suppress "unused parameter" error
 }
 
 /* SD Card supply voltage - choose the one appropiate to your board */
